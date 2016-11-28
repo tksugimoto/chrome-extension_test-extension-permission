@@ -1,0 +1,16 @@
+{
+	"name": "Chrome拡張の権限テスト",
+	"version": "0.1.0",
+	"manifest_version": 2,
+	"description": "Chrome拡張の権限で何ができるかの確認",
+
+	"permissions": [
+		"contextMenus",
+		"activeTab"
+	],
+
+	"background": {
+		"persistent": false,
+		"scripts": ["background.js"]
+	}
+}
