@@ -4,6 +4,7 @@
 		return {
 			tag: elem.tagName,
 			type: elem.type,
+			name: elem.name,
 			value: elem.value
 		};
 	});

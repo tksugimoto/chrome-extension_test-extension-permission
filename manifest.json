@@ -5,6 +5,7 @@
 	"description": "Chrome拡張の権限で何ができるかの確認",
 
 	"permissions": [
+		"storage",
 		"contextMenus",
 		"activeTab"
 	],

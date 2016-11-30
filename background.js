@@ -23,6 +23,22 @@ chrome.contextMenus.onClicked.addListener((info, tab) => {
 
 
 chrome.runtime.onMessage.addListener((message, sender) => {
-	console.log(sender.url);
+	console.group("url: ", sender.url);
+	console.log(sender.tab.title);
 	console.table(message.data);
+	console.groupEnd();
+
+	chrome.storage.local.set({
+		inputData: {
+			page: {
+				url: sender.url,
+				title: sender.tab.title
+			},
+			data: message.data
+		}
+	}, () => {
+		chrome.tabs.create({
+			url: "popup_input.html"
+		});
+	});
 });
