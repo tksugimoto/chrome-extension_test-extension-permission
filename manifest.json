@@ -1,6 +1,6 @@
 {
 	"name": "Chrome拡張の権限テスト",
-	"version": "0.1.0",
+	"version": "0.2.0",
 	"manifest_version": 2,
 	"description": "右クリックメニュー・アイコンクリック・キーボードショートカットでページ内入力値の抽出",
 
