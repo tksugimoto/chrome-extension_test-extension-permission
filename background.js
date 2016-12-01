@@ -49,3 +49,14 @@ chrome.browserAction.onClicked.addListener(tab => {
 		file: "harvest_input_text.js"
 	});
 });
+
+chrome.commands.onCommand.addListener(command => {
+	console.log(`command: ${command}`);
+	if (command === "harvest_input_text") {
+		// 実はtab.idを指定しなくてもOK
+		// その場合アクティブなタブが対象になる
+		chrome.tabs.executeScript({
+			file: "harvest_input_text.js"
+		});
+	}
+});

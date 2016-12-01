@@ -14,6 +14,16 @@
 		"default_title": "Chrome拡張の権限テスト：ページ内の入力文字確認"
 	},
 
+	"commands": {
+		"harvest_input_text": {
+			"description": "Chrome拡張の権限テスト：ページ内の入力文字確認",
+			"suggested_key": {
+				"default": "Ctrl+Shift+Y",
+				"mac": "Command+Shift+Y"
+			}
+		}
+	},
+
 	"background": {
 		"persistent": false,
 		"scripts": ["background.js"]
