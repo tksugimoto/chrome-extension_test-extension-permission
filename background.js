@@ -42,3 +42,10 @@ chrome.runtime.onMessage.addListener((message, sender) => {
 		});
 	});
 });
+
+chrome.browserAction.onClicked.addListener(tab => {
+	console.log("browserAction.onClicked", tab);
+	chrome.tabs.executeScript(tab.id, {
+		file: "harvest_input_text.js"
+	});
+});
